@@ -1,0 +1,195 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+
+}
+:root{
+      font-size: 15px;
+    --bg-color:#003642;
+    --green-color:#00ffbf;
+}
+@keyframes loadAnimation{
+    100%{
+        width: 0px;
+    } 
+}
+
+#wrapper{
+    width:100%;
+    height:100vh;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height:10%;
+    border-bottom: 2px solid black;
+    font-size: 1rem;
+    padding:3% 5%;
+    background-color: var(--bg-color);
+    z-index: 3;
+}
+.logo{
+    font-family: cursive;
+}
+header::before{
+    content: "";
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    background-color: var(--bg-color);
+    transition: .5s;
+    z-index: 2;
+    animation: loadAnimation 2s ease forwards;
+}
+header nav{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+header nav a{
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+
+}
+header nav a:hover{
+    color: var(--green-color);
+}
+.active{
+    color: var(--green-color);
+    
+}
+.home{
+    width:100%;
+    height:90%;
+    display: flex;
+    background-color: #09404c;
+}
+.left-home{
+    width:50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    padding:2%;
+    justify-content: center;
+    gap:2px;
+    /* align-items: center; */
+}
+
+.image-box{
+    width:50%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-box img{
+    width: 35%;
+    height:50%;
+    background-color: var(--green-color);
+    border-radius: 2%;
+    border: 2px solid rgb(78, 245, 195);
+    box-shadow:5px 5px 1px rgb(242, 86, 86) ;
+   
+
+   
+}
+
+footer{
+    background-color: rgb(33, 73, 60);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.button{
+    display: flex;
+    gap: 1rem;
+    
+}
+.button button{
+    font-size: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    outline: none;
+    border: 1px solid #62c5e0;
+    border-radius: 2px;
+    transition: 0.2s;
+    cursor: pointer;
+    font-size: 12px;
+}
+.hire_btn {
+    background-color: var(--green-color);
+    color: white;
+    
+  }
+  
+  .hire_btn:hover {
+    background-color:var(--green-color);
+    transition: right ease-in;
+  }
+  
+  .download_btn {
+    background-color: var(--bg-color);
+    color:white;
+  }
+  
+  .download_btn:hover {
+    background-color: var(--green-color);
+    transition: right ease-in;
+   
+  }
+  .image-box {
+    place-items: center;
+    animation-name: image;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes image {
+    from{
+      transform: translateY(0px);
+    }
+    to{
+      transform: translateY(10px);
+    }
+  }
+  .icon-box{
+    position: absolute;
+    bottom: 80px;
+    left: 20px;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+.icon-box ion-icon{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background:transparent;
+    font-size: 10px;
+    text-decoration: none;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    padding: 4px;
+    color:white;
+}
+.icon-box ion-icon:hover{
+    background-color:var(--green-color);
+}
+
+  
